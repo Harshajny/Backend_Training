@@ -1,0 +1,2 @@
+export const JWT_SECRET="87979787979304998D";
+export const JWT_VALIDITY="36h";

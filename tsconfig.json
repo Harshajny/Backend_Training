@@ -5,6 +5,11 @@
       "esModuleInterop": true,
       "target": "es6",
       "sourceMap": true,
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
       "outDir": "dist"
   }
 }
+
+
+// added "emitDecoratorMetadata": true, "experimentalDecorators": true, because of which the decorator used in EMployee.ts isnt an erro

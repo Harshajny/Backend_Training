@@ -1,0 +1,42 @@
+//make an employee controller object
+//when creating an object the constructor is automatically called
+
+import EmployeeController from "../controller/employee.controller";
+import dataSource from "../db/data-source.db";
+import Department from "../entity/department.entity";
+import Employee from "../entity/employee.entity";
+import DepartmentRepository from "../repository/department.repository";
+import { EmployeeRepository } from "../repository/employee.repository";
+import EmployeeService from "../service/employee.service";
+
+const employeeController = new EmployeeController(
+  new EmployeeService(
+    new EmployeeRepository(dataSource.getRepository(Employee)),
+    new DepartmentRepository(dataSource.getRepository(Department))
+  )
+);
+const employeeRouter = employeeController.router;
+
+export default employeeRouter;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+/*dataSource : typeorm object*/
